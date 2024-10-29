@@ -1,0 +1,19 @@
+{
+  "name": "js-playwright-cucumber-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js"
+  },
+  "author": "Avas Brahma",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.45.2"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7"
+  }
+}
