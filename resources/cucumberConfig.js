@@ -4,6 +4,8 @@ const { chromium, webkit, firefox } = require('@playwright/test');
 
 const { browserSetup, browserLaunchOptions } = require('./browserConfig');
 
+const BeforeActions=require('./BeforeActions');
+
 setDefaultTimeout(60000);
 
 
@@ -30,15 +32,18 @@ BeforeAll(async()=> {
                     global.browser=await chromium.launch(browserLaunchOptions);
     }
 
+    await BeforeActions.runBeforeAllTest();
+
 });
 
-Before({ name: "Set up browser context for desktop", tags: "not @mobile"}, async()=>{
+Before({ name: "Set up browser context for desktop", tags: "not @mobile"}, async(scenario)=>{
  global.context = await global.browser.newContext({
     ignoreHTTPSErrors:true,
     args:["--start-maximized"],
     viewport: null
  });
  global.page=await global.context.newPage();
+ await BeforeActions.runBeforeConfig(scenario);
 })
 
 
