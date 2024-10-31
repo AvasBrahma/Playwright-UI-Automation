@@ -43,9 +43,8 @@ Before({ name: "Set up browser context for desktop", tags: "not @mobile"}, async
     viewport: null
  });
  global.page=await global.context.newPage();
- await BeforeActions.runBeforeConfig(scenario);
+ await BeforeActions.runBeforeConfig(scenario, global.page);
 })
-
 
 AfterAll(async()=>{
     await global.browser.close();

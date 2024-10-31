@@ -2,6 +2,7 @@ const {expect}=require("@playwright/test");
 const { Before, BeforeAll, AfterAll, After, setDefaultTimeout } = require("@cucumber/cucumber");
 const fs=require('fs');
 const path=require('path');
+const {PWHelper} = require('../utils/pwHelper');
 
 class BeforeActions{
 
@@ -13,8 +14,9 @@ class BeforeActions{
         BeforeActions.timeStampPath=path.join(projectDir, `${timeStamp}`);
     }
 
-    static async runBeforeConfig(scenario){
+    static async runBeforeConfig(scenario, page){
      await this.setUpReportDir(scenario);
+     await this.setPage(page);
     }
 
     static async setUpReportDir(scenario){
@@ -26,6 +28,16 @@ class BeforeActions{
        if(!fs.existsSync(baseDir)){
         fs.mkdirSync(baseDir, {recursive: true});
        }
+
+       global.testContext={
+        scenarioName: scenarioName,
+        tags: tags,
+        baseDir: baseDir
+       }
+    }
+
+    static async setPage(page){
+        PWHelper.setPage(page);
     }
 }
 
