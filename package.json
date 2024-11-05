@@ -14,6 +14,7 @@
     "@playwright/test": "^1.45.2"
   },
   "dependencies": {
-    "cucumber": "^6.0.7"
+    "cucumber": "^6.0.7",
+    "winston": "^3.16.0"
   }
 }

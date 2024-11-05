@@ -3,6 +3,9 @@ const { Before, BeforeAll, AfterAll, After, setDefaultTimeout } = require("@cucu
 const fs=require('fs');
 const path=require('path');
 const {PWHelper} = require('../utils/pwHelper');
+const { logger, createTestLogger }=require('../utils/pwLogger');
+const winston = require("winston");
+
 
 class BeforeActions{
 
@@ -28,7 +31,12 @@ class BeforeActions{
        if(!fs.existsSync(baseDir)){
         fs.mkdirSync(baseDir, {recursive: true});
        }
-
+       const logsFilePath=createTestLogger(baseDir);
+       logger.clear();
+       logger.add(new winston.transports.File({
+        filename: logsFilePath,
+        level: 'info'
+       }));
        global.testContext={
         scenarioName: scenarioName,
         tags: tags,
