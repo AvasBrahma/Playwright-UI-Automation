@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 
 class CommonActions{
 
@@ -7,7 +7,7 @@ class CommonActions{
    }
 
    async goto(){
-    await this.page.goto("URL")
+    await this.page.goto(process.env.MainURL, { waitUntil: 'networkidle'});
    }
 
    async clickButton(PageObject, buttonName){
@@ -52,3 +52,5 @@ class CommonActions{
 
 
 }
+
+module.exports= { CommonActions };
