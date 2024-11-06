@@ -1,6 +1,6 @@
 const {expect}= require("@playwright/test");
 
-class FlipkartPageObject{
+class FlipkartHomePageObject{
 
   constructor(page){
        this.page=page;
@@ -13,4 +13,4 @@ class FlipkartPageObject{
 
 }
 
-module.exports={FlipkartPageObject};
+module.exports={FlipkartHomePageObject};
