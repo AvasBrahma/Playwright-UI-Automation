@@ -5,6 +5,7 @@ const path=require('path');
 const {PWHelper} = require('../utils/pwHelper');
 const { logger, createTestLogger }=require('../utils/pwLogger');
 const winston = require("winston");
+const AWSConfig=require("./aws/awsConfig");
 
 
 class BeforeActions{
@@ -46,6 +47,12 @@ class BeforeActions{
 
     static async setPage(page){
         PWHelper.setPage(page);
+    }
+
+    static async runAWSSecretManagerConfig(){
+        await AWSConfig.setAWSConfig('ea-west-1');
+        const secretValue=await AWSConfig.getSecretValue('app-test');
+
     }
 }
 
