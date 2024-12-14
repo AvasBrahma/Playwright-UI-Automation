@@ -1,8 +1,6 @@
 
 const { Given, Then, When, Before } =require('@cucumber/cucumber')
-
 const { expect } = require ('@playwright/test');
-const { FlipkartHomePageObject } =require('../pageObject/flipkartHomePageObject');
 const { CommonActions } = require('../pageObject/commonActions');
 const PageFactory=require('../utils/PageFactory');
 
