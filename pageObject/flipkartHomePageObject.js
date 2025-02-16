@@ -7,6 +7,7 @@ class FlipkartHomePageObject{
        this.page=page;
        this.homePageCategorySectionXpathTemp="//div[@aria-label='{categoryName}']";
        this.categorySubMenuTemp="//a[@class='_1BJVlg' and contains(text(), '{subMenuName}')]";
+       this.brandFilterCheckBoxTemp="//div[@class='_6i1qKy' and contains(text(), '{brandName}')]/preceding-sibling::input[@type='checkbox']";
   }
 
 
