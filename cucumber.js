@@ -11,7 +11,7 @@ module.exports={
 
     stepDefinitionPath: `stepDefinitions/*.js`,
 
-    featureFilePath: `features/*.feature`,
+    featureFilePath: `features/*.feature`
 
 
 

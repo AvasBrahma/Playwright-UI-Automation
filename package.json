@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js"
+    "test": "npx cucumber-js",
+    "quicktest": "npx playwright test tests/quicktest.js"
   },
   "author": "Avas Brahma",
   "license": "ISC",

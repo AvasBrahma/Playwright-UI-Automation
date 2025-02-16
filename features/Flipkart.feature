@@ -5,4 +5,5 @@ Feature: Validate_flipkart
 Scenario: navigate to home page
 Given Navigate to the Website
 And Navigate To Home Page Category 'Electronics'
+When Click to the Category Sub Menu 'Gaming'
 
