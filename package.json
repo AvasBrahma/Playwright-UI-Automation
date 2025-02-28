@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1692.0",
+    "csv-parser": "^3.2.0",
     "cucumber": "^6.0.7",
     "dotenv": "^16.4.5",
     "winston": "^3.16.0"
