@@ -20,7 +20,7 @@ An advanced test automation framework built using **Playwright**, **JavaScript**
 ## 📁 Folder Structure
 
 project-root/
-├── features/ # Feature files (BDD scenarios)
+|- features/ # Feature files (BDD scenarios)
 ├── step-definitions/ # Step implementations
 ├── pages/ # Page Object Models
 ├── utils/ # Utilities (DB, API, CSV, logger, etc.)
