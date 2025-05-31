@@ -31,7 +31,7 @@ project-root/
 
 📊 target/ – Cucumber HTML reports
 
-⚙️ config/ – Configuration files (env, secrets)
+⚙️ resources/ – Configuration files (env, secrets) and cucumber hooks configuration
 
 🗂️ test-data/ – External test data (CSV/JSON)
 
