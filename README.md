@@ -20,17 +20,17 @@ An advanced test automation framework built using **Playwright**, **JavaScript**
 ## 📁 Folder Structure
 
 project-root/
-├── features/           # Feature files (BDD scenarios)
-├── step-definitions/   # Step implementations
-├── pages/              # Page Object Models
-├── utils/              # Utilities (DB, API, CSV, logger, etc.)
-├── target/             # Generated Cucumber HTML reports
-├── config/             # Config files (env, secrets)
-├── test-data/          # External test data (CSV/JSON)
-├── jenkins/            # Jenkins pipeline scripts
-├── .env                # Environment variables
-├── cucumber.js         # Cucumber config
-└── package.json
+├── 🧪 features/           # 🧪 BDD scenarios (Feature files)
+├── 🧾 step-definitions/   # 🧾 Step implementations
+├── 🧭 pages/              # 🧭 Page Object Models
+├── 🧰 utils/              # 🧰 Utilities (DB, API, CSV, logger, etc.)
+├── 📊 target/             # 📊 Cucumber HTML reports
+├── ⚙️ config/             # ⚙️ Configuration files (env, secrets)
+├── 🗃️ test-data/          # 🗃️ External test data (CSV/JSON)
+├── 🚀 jenkins/            # 🚀 Jenkins pipeline scripts
+├── 🔐 .env                # 🔐 Environment variables
+├── 🥒 cucumber.js         # 🥒 Cucumber configuration
+└── 📦 package.json        # 📦 Project dependencies and scripts
 
 
 ## ⚙️ Setup Instructions
